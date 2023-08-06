@@ -20,7 +20,7 @@ class Auth extends CI_Controller {
 
 		if ($this->form_validation->run() == false) {
 				$data['title']	= 'Halaman Login | SIM ';
-				$this->load->view('v_Login',$data);
+				$this->load->view('login',$data);
 		} 
 		else {
 			$this->_login();
