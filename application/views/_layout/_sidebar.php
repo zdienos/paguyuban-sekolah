@@ -1,40 +1,64 @@
-<?php $aktif = $this->uri->segment(1); ?>
-<ul class="sidebar-menu" data-widget="tree">
-    <li class="header">MENU UTAMA</li>
-    <li class = "<?php echo activate_menu('Beranda')?>"><a href="<?= base_url()?>Beranda"><i class="fa fa-dashboard"></i> <span>Beranda</span><span class="pull-right-container"></span></a></li>
-    <li class="treeview <?php if ($aktif == 'Guru' || $aktif == 'Siswa' || $aktif == 'Kelas' || $aktif == 'Transaksi' || $aktif == 'Tanggal') echo 'active' ?>">
-        <a href="#"><i class="fa fa-database"></i> <span>Data Master</span>
-            <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+    <div class="app-brand demo">
+        <a href="index.html" class="app-brand-link">
+            <span class="app-brand-logo demo">
+                <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z" fill="#7367F0" />
+                    <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd" d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z" fill="#161616" />
+                    <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd" d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z" fill="#161616" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z" fill="#7367F0" />
+                </svg>
+            </span>
+            <span class="app-brand-text demo menu-text fw-bold">Vuexy</span>
         </a>
-        <ul class="treeview-menu">
-            <li class = "<?php echo activate_menu('Guru')?>"><a href="<?= base_url()?>Guru"><i class="fa fa-circle-o"></i>Data Guru</a></li>
-            <li class = "<?php echo activate_menu('Kelas')?>"><a href="<?= base_url()?>Kelas"><i class="fa fa-circle-o"></i>Data Kelas</a></li>
-            <li class = "<?php echo activate_menu('Siswa')?>"><a href="<?= base_url()?>Siswa"><i class="fa fa-circle-o"></i>Data Siswa</a></li>
-            <li class = "<?php echo activate_menu('Transaksi')?>"><a href="<?= base_url()?>Transaksi"><i class="fa fa-circle-o"></i>Jenis Transaksi</a></li>
-            <li class = "<?php echo activate_menu('Tanggal')?>"><a href="<?= base_url()?>Tanggal"><i class="fa fa-circle-o"></i>Tanggal Merah</a></li>
-        </ul>
-    </li>
-    <li class="treeview <?php if ($aktif == 'SPP' || $aktif == 'Pendaftaran' || $aktif == 'Ujian' || $aktif == 'Snack' || $aktif == 'Catering' || $aktif == 'Lainnya' ) echo 'active' ?>">
-        <a href="#"><i class="fa fa-level-down"></i> <span>Kas Masuk</span>
-            <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+
+        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+            <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
+            <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
         </a>
-        <ul class="treeview-menu">
-            <li class = "<?php echo activate_menu('Pendaftaran')?>"><a href="<?= base_url()?>Pendaftaran"><i class="fa fa-circle-o"></i>Pendaftaran</a></li>
-            <li class = "<?php echo activate_menu('SPP')?>"><a href="<?= base_url()?>SPP"><i class="fa fa-circle-o"></i>Uang SPP</a></li>
-            <li class = "<?php echo activate_menu('Ujian')?>"><a href="<?= base_url()?>Ujian"><i class="fa fa-circle-o"></i>Uang Ujian</a></li>
-            <li class = "<?php echo activate_menu('Snack')?>"><a href="<?= base_url()?>Snack"><i class="fa fa-circle-o"></i>Uang Snack</a></li>
-            <li class = "<?php echo activate_menu('Catering')?>"><a href="<?= base_url()?>Catering"><i class="fa fa-circle-o"></i>Uang Catering</a></li>
-             <li class = "<?php echo activate_menu('Lainnya')?>"><a href="<?= base_url()?>Lainnya"><i class="fa fa-circle-o"></i>Pemasukan Lainnya</a></li>
-        </ul>
-    </li>
-    <li class="treeview <?php if ($aktif == 'Gaji' || $aktif == 'Pengeluaran') echo 'active' ?>">
-        <a href="#"><i class="fa fa-level-up"></i> <span>Kas Keluar</span>
-            <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-        </a>
-        <ul class="treeview-menu">
-            <li class = "<?php echo activate_menu('Gaji')?>"><a href="<?= base_url()?>Gaji"><i class="fa fa-circle-o"></i>Pembayaran Gaji</a></li>
-             <li class = "<?php echo activate_menu('Pengeluaran')?>"><a href="<?= base_url()?>Pengeluaran"><i class="fa fa-circle-o"></i>Pengeluaran Lainnya</a></li>
-        </ul>
-    </li>
-    <li class = "<?php echo activate_menu('Laporan')?>"><a href="<?= base_url()?>Laporan"><i class="fa fa-line-chart"></i> <span>Laporan</span><span class="pull-right-container"></span></a></li>
-</ul>
+    </div>
+
+    <div class="menu-inner-shadow"></div>
+
+    <ul class="menu-inner py-1">
+        <li class="menu-item active">
+            <a href="index.html" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                <div data-i18n="Beranda">Beranda</div>
+            </a>
+        </li>
+
+        <!-- Master -->
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-layout-sidebar"></i>
+                <div data-i18n="Master">Master</div>
+            </a>
+
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="layouts-collapsed-menu.html" class="menu-link">
+                        <div data-i18n="Data Guru">Data Guru</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="layouts-content-navbar.html" class="menu-link">
+                        <div data-i18n="Data Kelas">Data Kelas</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="layouts-content-navbar-with-sidebar.html" class="menu-link">
+                        <div data-i18n="Data Siswa">Data Siswa</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../horizontal-menu-template" class="menu-link" target="_blank">
+                        <div data-i18n="Jenis Transaksi">Horizontal</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+
+    </ul>
+</aside>

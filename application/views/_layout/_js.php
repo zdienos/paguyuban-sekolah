@@ -1,22 +1,20 @@
-<script src="<?php echo base_url('assets/')?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="<?php echo base_url('assets/')?>bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- build:js assets/vendor/js/core.js -->
+<script src="./assets/vendor/libs/jquery/jquery.js"></script>
+<script src="./assets/vendor/libs/popper/popper.js"></script>
+<script src="./assets/vendor/js/bootstrap.js"></script>
+<script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="./assets/vendor/libs/node-waves/node-waves.js"></script>
 
+<script src="./assets/vendor/libs/hammer/hammer.js"></script>
+<script src="./assets/vendor/libs/i18n/i18n.js"></script>
+<script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script>
 
-<!-- DataTables -->
-<script src="<?php echo base_url('assets/')?>bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="<?php echo base_url('assets/')?>bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<!-- iCheck 1.0.1 -->
-<script src="<?php echo base_url('assets/')?>plugins/iCheck/icheck.min.js"></script>
-<!-- Select2 -->
-<script src="<?php echo base_url('assets/')?>bower_components/select2/dist/js/select2.full.min.js"></script>
-<!-- Jquery Validate -->
-<script src="<?php echo base_url('assets/')?>dist/js/jquery.validate.min.js"></script>
-<!-- bootstrap datepicker -->
-<script src="<?php echo base_url('assets/')?>bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- Sweetalert2 -->
-<script src="<?php echo base_url('assets/'); ?>bower_components/sweetalert2/sweetalert2.all.min.js"></script>
+<script src="./assets/vendor/js/menu.js"></script>
+<!-- endbuild -->
 
+<!-- Vendors JS -->
+<script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
+<script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
 
-
-<script src="<?php echo base_url('assets/')?>bower_components/fastclick/lib/fastclick.js"></script>
-<script src="<?php echo base_url('assets/')?>dist/js/adminlte.min.js"></script> 
+<!-- Main JS -->
+<script src="./assets/js/main.js"></script>
